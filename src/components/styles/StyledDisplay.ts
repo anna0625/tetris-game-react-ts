@@ -2,9 +2,8 @@ import styled from "styled-components";
 import tw from "tailwind-styled-components";
 
 type Props = {
-  gameover?: boolean;
+  gameover?: string;
 };
-
 // const Display = styled.div<Props>``;
 export const StyledDisplay = tw.div<Props>`
     container
@@ -12,7 +11,7 @@ export const StyledDisplay = tw.div<Props>`
     items-center
     w-full
     min-h-[10vh]
-    rounded-sm
+    rounded-lg
     p-5
     mt-5
     border-2
@@ -20,5 +19,5 @@ export const StyledDisplay = tw.div<Props>`
     bg-black
     font-mono
     text-2xl
-    ${(p) => (p.gameover ? "text-red-500" : "text-green-500")}
+    ${(p) => (p.gameover === "true" ? "text-red-300" : "text-green-300")}
 `;

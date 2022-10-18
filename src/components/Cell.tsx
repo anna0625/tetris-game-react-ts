@@ -1,12 +1,14 @@
 import React from "react";
 import { StyledCell } from "./styles/StyledCell";
-import { Tertrominos } from "../tetrominos";
+import { Tetrominos } from "../tetrominos";
 
 type Props = {
   type?: string;
 };
 
-export const Cell = ({ type }: Props) => {
-  const colorT: string = Tertrominos["L"].color;
-  return <StyledCell type={"L"} color={colorT} />;
+const Cell = ({ type }: Props) => {
+  const colorT: string = Tetrominos[type!].color;
+  return <StyledCell type={type} color={colorT} />;
 };
+
+export default React.memo(Cell);

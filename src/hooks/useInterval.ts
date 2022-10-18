@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
-
+import ts from "typescript";
+// @ts-ignore
 export function useInterval(callback, delay) {
   const savedCallback = useRef();
   // Remember the latest callback.
@@ -8,11 +9,13 @@ export function useInterval(callback, delay) {
   }, [callback]);
 
   // Set up the interval.
+  // @ts-ignore
   useEffect(() => {
     function tick() {
+      // @ts-ignore
       savedCallback.current();
     }
-    if (delay !== null) {
+    if (delay !== -1) {
       const id = setInterval(tick, delay);
       return () => {
         clearInterval(id);

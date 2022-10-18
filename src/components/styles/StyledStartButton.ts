@@ -5,16 +5,16 @@ export const StyledStartButton = tw.button`
     w-full
     p-2
     mt-5
-    min-h-[10vh]
+    min-h-[5vh]
     border-2
-    border-gray-300
-    rounded-sm
-    bg-gray-500
+    border-blue-300
+    rounded-lg
+    bg-blue-500
     text-white
     font-mono
     text-2xl
     outline-none
     focus:outline-none
-    hover:bg-gray-600
-    active:bg-gray-700
+    hover:bg-blue-600
+    active:bg-blue-700
 `;

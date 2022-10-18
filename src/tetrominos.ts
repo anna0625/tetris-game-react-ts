@@ -7,8 +7,8 @@ interface typeTetrominos {
   [key: string]: Object;
 }
 
-export const Tertrominos: typeTetrominos = {
-  0: { shape: [[0]], color: "bg-slate-100" },
+export const Tetrominos: typeTetrominos = {
+  0: { shape: [[0]], color: "bg-slate-900" },
   I: {
     shape: [
       [0, "I", 0, 0],
@@ -16,7 +16,7 @@ export const Tertrominos: typeTetrominos = {
       [0, "I", 0, 0],
       [0, "I", 0, 0],
     ],
-    color: "bg-slate-200",
+    color: "bg-blue-100",
   },
   J: {
     shape: [
@@ -24,7 +24,7 @@ export const Tertrominos: typeTetrominos = {
       [0, "J", 0],
       ["J", "J", 0],
     ],
-    color: "bg-slate-300",
+    color: "bg-blue-200",
   },
   L: {
     shape: [
@@ -32,14 +32,14 @@ export const Tertrominos: typeTetrominos = {
       [0, "L", 0],
       [0, "L", "L"],
     ],
-    color: "bg-slate-400",
+    color: "bg-blue-300",
   },
   O: {
     shape: [
       ["O", "O"],
       ["O", "O"],
     ],
-    color: "bg-slate-500",
+    color: "bg-blue-400",
   },
   S: {
     shape: [
@@ -48,7 +48,7 @@ export const Tertrominos: typeTetrominos = {
       [0, 0, 0],
     ],
 
-    color: "bg-slate-600",
+    color: "bg-blue-500",
   },
   T: {
     shape: [
@@ -56,7 +56,7 @@ export const Tertrominos: typeTetrominos = {
       ["T", "T", "T"],
       [0, "T", 0],
     ],
-    color: "bg-slate-700",
+    color: "bg-blue-600",
   },
   Z: {
     shape: [
@@ -65,7 +65,7 @@ export const Tertrominos: typeTetrominos = {
       [0, 0, 0],
     ],
 
-    color: "bg-gray-100",
+    color: "bg-blue-700",
   },
 };
 
@@ -73,5 +73,5 @@ export const randomTetromino = () => {
   const tetrominos = "IJLOSTZ";
   const randomTetrominoStr =
     tetrominos[Math.floor(Math.random() * tetrominos.length)];
-  return Tertrominos[randomTetrominoStr];
+  return Tetrominos[randomTetrominoStr];
 };

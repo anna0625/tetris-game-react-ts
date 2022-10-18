@@ -1,21 +1,33 @@
 import tw from "tailwind-styled-components";
 import styled from "styled-components";
 
-type Props = {};
+type Props = {
+  role?: string;
+  tabIndex?: number;
+  onKeyDown?: (event: React.KeyboardEvent<HTMLDivElement>) => void;
+};
 
-const TetrisWrapper = styled.div``;
-export const StyledTetrisWrapper = tw(TetrisWrapper)<Props>`;
-    w-full
-    h-screen
-    bg-gray-900
+export const StyledTetrisWrapper = styled.div<Props>`
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
 `;
 
-const Tetris = styled.div``;
-export const StyledTetris = tw(Tetris)<Props>`;
+// export const TetrisWrapper = tw(TetrisWrapper)`
+//     container
+//     w-full
+//     h-screen
+//     bg-gray-900
+// `;
+
+const Tetris = styled.div<Props>``;
+export const StyledTetris = tw(Tetris)`
     flex
-    items-start
+    items-center
     justify-center
     p-4
     mx-auto
     max-w-screen-lg
+    h-screen
 `;

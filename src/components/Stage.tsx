@@ -1,15 +1,15 @@
 import React from "react";
-import { Cell } from "./Cell";
+import Cell from "./Cell";
 import { StyledStage } from "./styles/StyledStage";
 
 type Props = {
-  stage: any[][];
+  stage: any;
 };
 
 export const Stage = ({ stage }: Props) => {
   return (
     <StyledStage>
-      {stage.map((row) =>
+      {stage.map((row: any[]) =>
         row.map((cell, x) => <Cell key={x} type={cell[0]} />)
       )}
     </StyledStage>
